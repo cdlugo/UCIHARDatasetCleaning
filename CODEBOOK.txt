@@ -1,0 +1,22 @@
+==================================================================
+UCI HAR Dataset Summary
+Version 1.0
+==================================================================
+
+This dataset presents a summary of the original UCI HAR Dataset in a cleaner
+format.
+
+For each record it is provided:
+======================================
+
+- The activity being performed
+- The subject being observed
+- A mean for the specific feature present in the original dataset
+
+Notes:
+======
+- Features are normalized and bounded within [-1,1].
+- Only mean and standard deviation features in the original
+  dataset are included in the summary dataset
+- For more complete information please see the orignal dataset at
+  https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
