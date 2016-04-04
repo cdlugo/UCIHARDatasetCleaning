@@ -21,6 +21,11 @@ run_analysis <- function() {
   print("Filtering columns")
   mean_and_std_only <- combined_data[,grepl("^activity$|^subject$|-mean\\(\\)|-std\\(\\)", names(combined_data))]
   
+  # Tidy up column names
+  names(mean_and_std_only) <- gsub("\\(\\)|-", "", names(mean_and_std_only))
+  names(mean_and_std_only) <- gsub("mean", "Mean", names(mean_and_std_only))
+  names(mean_and_std_only) <- gsub("std", "Std", names(mean_and_std_only))
+  
   # Create summary dataset
   print("Summarizing data")
   summary <- mean_and_std_only %>%
